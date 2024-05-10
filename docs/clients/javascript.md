@@ -199,14 +199,14 @@ pub fn allocate(
 ) -> Instruction
 ```
 
-In Solana when you want to interact with a program you must first know all the
+In Solana, when you want to interact with a program you must first know all the
 accounts you will be interacting with.
 
 You must always provide every account that the program will be interacting
 within the instruction. Not only that, but you must provide whether or not the
 account is `isSigner` or `isWritable`.
 
-In the `allocate` method above, a single account `pubkey` is required, as well
+In the `allocate` method above, a single account's `pubkey` is required, as well
 as an amount of `space` for allocation. We know that the `allocate` method
 writes to the account by allocating space within it, making the `pubkey`
 required to be `isWritable`. `isSigner` is required when you are designating the
